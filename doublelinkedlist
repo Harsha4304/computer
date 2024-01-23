@@ -1,0 +1,128 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// Node structure for doubly linked list
+struct Node {
+    int data;
+    struct Node* prev;
+    struct Node* next;
+};
+
+// Doubly linked list structure
+struct DoublyLinkedList {
+    struct Node* head;
+};
+
+// Function prototypes
+void createList(struct DoublyLinkedList* dll, int dataArray[], int size);
+void insertBeginning(struct DoublyLinkedList* dll, int data);
+void insertEnd(struct DoublyLinkedList* dll, int data);
+void deleteNode(struct DoublyLinkedList* dll, int data);
+void traverseList(struct DoublyLinkedList* dll);
+
+int main() {
+    // Example usage
+    struct DoublyLinkedList dll;
+    dll.head = NULL;
+
+    int dataArray[] = {1, 2, 3, 4, 5};
+
+    // Creating a doubly linked list
+    createList(&dll, dataArray, sizeof(dataArray) / sizeof(dataArray[0]));
+
+    // Inserting at the beginning
+    insertBeginning(&dll, 0);
+
+    // Inserting at the end
+    insertEnd(&dll, 6);
+
+    // Deleting a node
+    deleteNode(&dll, 3);
+
+    // Traversing the list
+    traverseList(&dll);
+
+    return 0;
+}
+
+// Function to create a doubly linked list
+void createList(struct DoublyLinkedList* dll, int dataArray[], int size) {
+    for (int i = 0; i < size; ++i) {
+        insertEnd(dll, dataArray[i]);
+    }
+}
+
+// Function to insert a node at the beginning
+void insertBeginning(struct DoublyLinkedList* dll, int data) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = data;
+    newNode->prev = NULL;
+    newNode->next = dll->head;
+
+    if (dll->head != NULL) {
+        dll->head->prev = newNode;
+    }
+
+    dll->head = newNode;
+}
+
+// Function to insert a node at the end
+void insertEnd(struct DoublyLinkedList* dll, int data) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = data;
+    newNode->next = NULL;
+
+    if (dll->head == NULL) {
+        newNode->prev = NULL;
+        dll->head = newNode;
+        return;
+    }
+
+    struct Node* last = dll->head;
+    while (last->next != NULL) {
+        last = last->next;
+    }
+
+    last->next = newNode;
+    newNode->prev = last;
+}
+
+// Function to delete a node with given data
+void deleteNode(struct DoublyLinkedList* dll, int data) {
+    if (dll->head == NULL) {
+        printf("List is empty. Deletion not possible.\n");
+        return;
+    }
+
+    struct Node* current = dll->head;
+    while (current != NULL) {
+        if (current->data == data) {
+            if (current->prev != NULL) {
+                current->prev->next = current->next;
+            } else {
+                dll->head = current->next;
+            }
+
+            if (current->next != NULL) {
+                current->next->prev = current->prev;
+            }
+
+            free(current);
+            return;
+        }
+
+        current = current->next;
+    }
+
+    printf("Node with data %d not found.\n", data);
+}
+
+// Function to traverse and print the doubly linked list
+void traverseList(struct DoublyLinkedList* dll) {
+    struct Node* current = dll->head;
+    while (current != NULL) {
+        printf("%d ", current->data);
+        current = current->next;
+    }
+    printf("\n");
+}
