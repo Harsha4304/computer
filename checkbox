@@ -1,0 +1,41 @@
+import java.awt.*;
+import java.awt.event.*; 
+public class fontex extends Frame implements ActionListener{
+	Button b1,b2,b3;
+	Font f1,f2,f3;
+	Label lab;
+	fontex(){
+		setSize(300,300);
+		setVisible(true);
+		setLayout(new FlowLayout());
+		b1 = new Button("Serif");
+		b2 = new Button("SansSerif");
+		b3 = new Button("Dialog");
+		lab = new Label("Font Tester!!!");
+		f1 = new Font("Serif",Font.BOLD,12);
+		f2 = new Font("SansSerif",Font.BOLD,12);
+		f3 = new Font("Dialog",Font.BOLD,12);
+		add(b1);
+		add(b2);
+		add(b3);
+		add(lab);
+		b1.addActionListener(this);
+		b2.addActionListener(this);
+		b3.addActionListener(this);
+	}
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource() == b1) {
+			lab.setFont(f1);
+		}
+		if(e.getSource() == b2) {
+			lab.setFont(f2);
+		}
+		if(e.getSource() == b3) {
+			lab.setFont(f3);
+		}
+	}
+	public static void main(String args[]) {
+		fontex mg = new fontex();
+	}
+	
+}
