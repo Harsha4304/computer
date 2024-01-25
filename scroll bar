@@ -1,0 +1,36 @@
+import java.awt.*;
+import java.awt.event.*;
+
+class scroll extends Frame implements AdjustmentListener {
+    Scrollbar sc;
+    Label lb;
+
+    scroll() {
+        lb = new Label("Color change shown here!!");
+        sc = new Scrollbar();
+        setLayout(null);
+        setVisible(true);
+        setSize(700, 700);
+        add(sc);
+        add(lb);
+        lb.setBackground(Color.black);
+        sc.setBounds(100, 100, 50, 400);
+        lb.setBounds(10,10,400,50);
+        sc.addAdjustmentListener(this);
+    }
+
+    public void adjustmentValueChanged(AdjustmentEvent e) {
+        int num = sc.getValue();
+        if (num < 15) {
+            lb.setForeground(Color.red);
+        } else if (num >= 15 && num <= 75) {
+            lb.setForeground(Color.blue);
+        } else {
+            lb.setForeground(Color.white);
+        }
+    }
+
+    public static void main(String args[]) {
+        new scroll();
+    }
+}
