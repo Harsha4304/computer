@@ -1,0 +1,31 @@
+import java.lang.*;
+class balexc extends Exception{
+    balexc(String Error,int bal){
+        super(Error);
+        System.out.println(bal +" That is low balance!!");
+    }
+}
+class throwex{
+    int tot;
+    throwex(int tot){
+        this.tot = tot;
+    }
+    void checking() throws balexc{
+        if(tot<10000){
+            throw new balexc("This is terrible", tot);
+        }
+        else{
+            System.out.println("All good!!");
+        }
+    }
+    public static void main(String args[]){
+        try{
+        throwex obj = new throwex(100000);
+        obj.checking();
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+    }
+}
+
