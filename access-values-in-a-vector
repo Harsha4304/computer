@@ -1,0 +1,14 @@
+# a vector of string type
+languages <- c("Swift", "Java", "R")
+
+# access first element of languages
+print(languages[1])  # "Swift"
+
+# access third element of languages
+print(languages[3]). # "R"
+========================
+# a vector of string type
+languages <- c("Swift", "Java", "R")
+
+# access 1st and 3rd element of languages
+print(languages[c(1,3)])  # "Swift" "R"
