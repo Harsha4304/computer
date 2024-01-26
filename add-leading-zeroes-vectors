@@ -1,0 +1,6 @@
+employee_id <- c(11, 12, 13, 14)
+
+# add leading zeros
+result <- paste0("0", employee_id)
+
+print(result) 
