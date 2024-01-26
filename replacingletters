@@ -1,0 +1,4 @@
+string1 <- "Programiz"
+
+# replace "z" with "ng" using gsub()
+gsub("z", "ng", string1) # programing
