@@ -6,3 +6,12 @@ match("i", vowel_letters) # 3
 
 # find index value of "u"
 match("u", vowel_letters) # 5
+=====================================
+# create two strings
+languages <- c("R", "Swift", "Java", "Python")
+
+# find index value of "Swift" using which()
+which(languages == "Swift") # 2
+
+# find index value of "Python" using which()
+which(languages == "Python") # 4
