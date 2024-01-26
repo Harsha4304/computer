@@ -1,0 +1,7 @@
+# create a string
+string1 <- "Programiz"
+
+# use nchar() to find length of string1
+result <- nchar(string1)
+
+cat("Total Length:", result)
