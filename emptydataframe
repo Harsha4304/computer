@@ -1,0 +1,9 @@
+empty_dataframe <- data.frame(Doubles = double(),
+  Characters = character(),
+  Integers = integer(),
+  Logicals = logical(),
+  Factors = factor()
+)
+
+# display structure of empty_dataframe
+print(str(empty_dataframe))
