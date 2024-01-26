@@ -1,0 +1,10 @@
+dataframe1 = data.frame(Id = c(101, 102, 103, 104, 105),
+  Course = c("DSA", "Graphics", "Calculus-1", "Physics", "Network")
+)
+
+dataframe2 = data.frame(Id = c(101, 103, 105, 108, 110),
+  Address = c("Nepal", "USA","Sweden", "Japan", "Norway")
+)
+
+# merge two dataframes based on Id
+merge(dataframe1,dataframe2, by = "Id")
