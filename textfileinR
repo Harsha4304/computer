@@ -1,0 +1,4 @@
+sentence1 <- "Data Science is fun"
+
+# use writeLines() to write to txt file
+writeLines(sentence1, "file1.txt")
