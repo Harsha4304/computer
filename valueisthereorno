@@ -1,0 +1,11 @@
+string1 <- "Programiz"
+
+value1 <- "miz"
+
+# check if "miz" is present in "Programiz"
+grepl(value1, string1)  # TRUE
+
+value2 <- "grm"
+
+# check if "grm" is present in "Programiz"
+grepl(value2, string1)  # FALSE
