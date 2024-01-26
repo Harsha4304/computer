@@ -1,0 +1,2 @@
+vector1 <- c("Data Science", "is", "fun")
+cat(vector1)
