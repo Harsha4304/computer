@@ -1,2 +1,15 @@
 vector1 <- c("Data Science", "is", "fun")
 cat(vector1)
+using print
+# create a vector of strings
+vector1 <- c("Science", "is","fun")
+ 
+# using paste() and separate vector strings with whitespace
+result1 <- paste(vector1, collapse = " ")
+ 
+print(result1)
+
+# using paste() and separate vector strings with hyphen
+result2 <- paste(vector1, collapse = "-")
+ 
+print(result2)
