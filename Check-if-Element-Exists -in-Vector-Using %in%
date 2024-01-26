@@ -1,0 +1,5 @@
+vowel_letters <- c("a", "e", "i", "o", "u")
+ 
+"a" %in% vowel_letters # TRUE
+
+"s" %in% vowel_letters # FALSE
