@@ -1,0 +1,12 @@
+# Create a data frame
+dataframe1 <- data.frame (
+  A = c("Juan", "Alcaraz", "Simantha"),
+  B = c(22, 15, 19),
+  C = c(TRUE, FALSE, TRUE)
+)
+
+# change column name using colnames()
+colnames(dataframe1) <- c("Name", "Age", "Vote")
+
+# display dataframe1 with new column names
+print(dataframe1)
