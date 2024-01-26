@@ -1,0 +1,4 @@
+text1 <- "     Programiz Pro         "
+ 
+# remove whitespaces using trimws()
+print(trimws(text1))
