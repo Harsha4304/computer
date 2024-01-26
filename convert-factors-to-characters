@@ -1,0 +1,6 @@
+factor1 <- factor(c("Male", "Female", "Transgender"))
+  
+# convert factor to character 
+result <- as.character(factor1)
+  
+print(result)
