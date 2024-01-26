@@ -1,0 +1,11 @@
+# create a vector
+languages <- c("R", "Swift", "Java", "Python")
+
+# find length of languages vector
+length(languages) # 4
+
+# create another vector
+numbers <- c(1,5,7,9,12,54)
+
+# find length of numbers vector
+length(numbers) # 6
