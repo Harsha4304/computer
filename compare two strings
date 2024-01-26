@@ -1,0 +1,7 @@
+string1 <- "R Programming"
+string2 <- "R Programming"
+ 
+# compare both strings
+result <- toupper(string1) == toupper(string2)
+ 
+print(result)
