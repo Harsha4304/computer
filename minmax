@@ -1,0 +1,16 @@
+minmax <- function(x) {
+  my_min = Inf
+  for (i in seq_along(x)) {
+    if (x[i] < my_min) my_min = x[i]
+  }
+  return(min = my_min)
+}
+
+
+minmax <- function(x) {
+  my_max = 0
+  for (i in seq_along(x)) {
+    if (x[i] > my_max) my_max = x[i]
+  }
+  return(max = my_max)
+}
