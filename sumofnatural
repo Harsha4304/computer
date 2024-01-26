@@ -1,0 +1,18 @@
+sum_of_number <- function(n) {
+  
+  if(n < 0) {
+  
+  print("Enter a positive number")
+  
+  } else {
+      sum = 0
+      
+      # use while loop to iterate until zero
+      while(n > 0) {
+        sum = sum + n
+        n = n - 1
+      }
+      
+      print(paste("The sum of numbers up to the given limit is", sum))
+  }
+}
