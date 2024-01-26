@@ -1,0 +1,8 @@
+# create two strings
+vowel_letters <- c("a", "e", "i", "o", "u")
+
+# find index value of "i"
+match("i", vowel_letters) # 3
+
+# find index value of "u"
+match("u", vowel_letters) # 5
