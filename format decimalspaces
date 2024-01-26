@@ -1,0 +1,6 @@
+num <- 1.34567
+
+# use sprintf() to format decimal places of num
+sprintf(num, fmt = '%#.4f') 
+
+Output: [1] "1.3457"
