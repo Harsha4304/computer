@@ -1,0 +1,16 @@
+vowel_letters <- c("a", "e", "i", "o", "u")
+ 
+"a" %in% vowel_letters # TRUE
+
+"s" %in% vowel_letters # FALSE
+=====================================
+
+
+# create two strings
+vowel_letters <- c("a", "e", "i", "o", "u")
+
+# check if "i" is present in vowel_letters
+match("i", vowel_letters) # 3
+
+# check if "p" is present in vowel_letters
+match("p", vowel_letters) # NA
